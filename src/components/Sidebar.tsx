@@ -6,11 +6,13 @@ import {
     Briefcase,
     Settings,
     TrendingUp,
+    FileSearch,
 } from 'lucide-react';
 
 const navigation = [
     { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
     { name: 'Assessments', href: '/assessments', icon: ClipboardList },
+    { name: 'Resume Analysis', href: '/resume-analysis', icon: FileSearch },
     { name: 'Jobs', href: '/jobs', icon: Briefcase },
     { name: 'Settings', href: '/settings', icon: Settings },
 ];

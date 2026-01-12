@@ -6,7 +6,7 @@ export const TopNavbar: React.FC = () => {
     const { user } = useAppContext();
 
     return (
-        <div className="sticky top-0 z-10 flex-shrink-0 flex h-16 bg-dark-900 border-b border-dark-700 shadow-lg">
+        <div className="sticky top-0 z-50 flex-shrink-0 flex h-16 bg-dark-900 border-b border-dark-700 shadow-lg">
             <div className="flex-1 px-4 flex justify-between items-center md:px-8">
                 <div className="flex-1 flex">
                     <div className="w-full flex md:ml-0">
