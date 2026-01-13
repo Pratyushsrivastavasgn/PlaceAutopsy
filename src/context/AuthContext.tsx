@@ -1,5 +1,6 @@
 import React, { createContext, useState, useCallback, useEffect, ReactNode } from 'react';
 import { googleLogout } from '@react-oauth/google';
+import { createOrUpdateUser } from '@/services/firestoreService';
 
 export interface GoogleUser {
     id: string;
@@ -71,13 +72,26 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         setIsAuthLoading(false);
     }, []);
 
-    const login = useCallback((credentialResponse: { credential?: string }) => {
+    const login = useCallback(async (credentialResponse: { credential?: string }) => {
         if (credentialResponse.credential) {
             const user = decodeJWT(credentialResponse.credential);
             if (user) {
                 setGoogleUser(user);
                 localStorage.setItem('analytix_google_user', JSON.stringify(user));
                 console.log('Google login successful:', user.email);
+                
+                // Sync user to Firebase
+                try {
+                    await createOrUpdateUser({
+                        id: user.id,
+                        email: user.email,
+                        name: user.name,
+                        picture: user.picture,
+                    });
+                    console.log('User synced to Firebase');
+                } catch (error) {
+                    console.error('Failed to sync user to Firebase:', error);
+                }
             }
         }
     }, []);
