@@ -1,129 +1,210 @@
-# Analytix - Placement Analytics Dashboard
+# 🎯 Analytix - AI-Powered Placement Analytics Platform
 
-AI-Powered placement analytics dashboard built with React, TypeScript.
+<div align="center">
 
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Gemini](https://img.shields.io/badge/Google%20Gemini-AI-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-Firestore-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-5.0-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
-## 🚀 Quick Start
+**Supercharge your placement journey with AI-driven resume analysis and actionable insights**
 
-### Prerequisites
+[Live Demo](https://placeautopsy.vercel.app) • [Report Bug](https://github.com/yourusername/analytix/issues)
 
-- Node.js 18+ and npm
-- **FREE** Gemini API key from [console.Gemini.com](https://console.Gemini.com/)
+</div>
 
-### Installation
+---
 
-1. Install dependencies:
-```bash
-npm install
-```
+## 🌟 Overview
 
-2. Get your FREE Gemini API key:
-   - Visit https://console.Gemini.com/
-   - Sign up (no credit card required)
-   - Create an API key
+**PlaceAutopsy **is a modern, AI-powered placement analytics dashboard that helps students and job seekers optimize their resumes for Applicant Tracking Systems (ATS). Built with Google's cutting-edge AI technology, it provides instant resume scoring, personalized recommendations, and comprehensive placement readiness analytics.
 
-3. Create `.env` file:
-```bash
-VITE_Gemini_API_KEY=your_Gemini_api_key_here
-```
+## ✨ Key Features
 
-4. Start development server:
-```bash
-npm run dev
-```
+### 🤖 AI-Powered Resume Analysis
 
-5. Open http://localhost:5175
+- **Gemini AI Integration** - Leverages Google's Gemini API for intelligent resume parsing and analysis
+- **ATS Compatibility Scoring** - Get instant scores based on industry-standard ATS criteria
+- **Smart Recommendations** - AI-generated suggestions to improve your resume's effectiveness
 
-## ✨ Features
+### 🔐 Seamless Authentication
 
-- 📊 **AI-Powered Analytics**: Resume analysis using Gemini's Llama 3.1 70B model
-- 📈 **Placement Readiness Score**: Comprehensive KPI tracking
-- 🎯 **Skill Gap Analysis**: Visual skill gap matrix with recommendations
-- 📉 **Failure Analysis**: Identify patterns in interview rejections
-- ✅ **Action Plan**: Personalized recommendations with resources
-- 💼 **Job Application Tracking**: Manage applications and interview feedback
-- 🎓 **Skills Inventory**: Track and showcase your skills with proof links
-- 🌙 **Dark Theme**: Beautiful dark green analytics theme
+- **Google OAuth 2.0** - One-click sign-in with your Google account
+- **Secure Sessions** - JWT-based authentication with automatic session management
 
-## 🤖 AI Integration
+### 📊 Analytics Dashboard
 
-**Powered by Gemini + Llama 3.1**
+- **Placement Readiness Score** - Comprehensive KPI tracking across multiple dimensions
+- **Skill Gap Matrix** - Visual representation of skills vs. industry requirements
+- **Failure Pattern Analysis** - Identify trends in interview rejections
+- **Personalized Action Plans** - Step-by-step improvement roadmap
 
-- **Model:** llama-3.1-70b-versatile
-- **Free Tier:** 30 requests/min, 14,400/day
-- **Speed:** Ultra-fast inference
-- **Cost:** FREE (no credit card needed!)
+### 💾 Cloud Data Persistence
 
-See [Gemini_SETUP.md](Gemini_SETUP.md) for detailed setup instructions.
+- **Firebase Firestore** - Real-time database for user data and analytics
+- **Cross-Device Sync** - Access your data from anywhere
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React 18 + TypeScript
-- **Build Tool**: Vite
-- **Routing**: React Router DOM
-- **Styling**: Tailwind CSS v3
-- **Charts**: Recharts
-- **AI**: Gemini
-- **Icons**: Lucide React
-- **State Management**: React Context API
-- **Storage**: LocalStorage
+### Frontend
 
-## 📖 Usage
+| Technology    | Purpose            |
+| ------------- | ------------------ |
+| React 19      | UI Framework       |
+| TypeScript    | Type Safety        |
+| Vite          | Build Tool         |
+| Tailwind CSS  | Styling            |
+| Framer Motion | Animations         |
+| Recharts      | Data Visualization |
+| Lucide React  | Icons              |
 
-1. **Upload Resume**: Start by uploading your resume (PDF, DOCX, or TXT)
-2. **Fill Profile**: Complete your profile information
-3. **Get Analytics**: AI analyzes your resume and generates comprehensive analytics
-4. **View Dashboard**: Explore your placement readiness, skill gaps, and action plan
-5. **Manage Skills**: Add, edit, or delete skills in the Assessments page
-6. **Track Applications**: Monitor job applications and interview progress
-7. **Update Settings**: Modify your profile and preferences
+### Backend & AI
+
+| Technology                   | Purpose            |
+| ---------------------------- | ------------------ |
+| **Google Gemini API**  | AI Resume Analysis |
+| **Google OAuth 2.0**   | Authentication     |
+| **Firebase Firestore** | Database           |
+
+### Deployment
+
+| Technology | Purpose          |
+| ---------- | ---------------- |
+| Vercel     | Hosting & CI/CD  |
+| Firebase   | Backend Services |
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+- Google Cloud Console account
+- Firebase project
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/yourusername/analytix.git
+   cd analytix
+   ```
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+3. **Configure environment variables**
+
+   Create a `.env` file in the root directory:
+
+   ```env
+   # Google OAuth
+   VITE_GOOGLE_CLIENT_ID=your_google_client_id
+
+   # Gemini AI
+   VITE_GEMINI_API_KEY=your_gemini_api_key
+
+   # Firebase
+   VITE_FIREBASE_API_KEY=your_firebase_api_key
+   VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+   VITE_FIREBASE_PROJECT_ID=your_project_id
+   VITE_FIREBASE_STORAGE_BUCKET=your_project.firebasestorage.app
+   VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+   VITE_FIREBASE_APP_ID=your_app_id
+   ```
+4. **Start development server**
+
+   ```bash
+   npm run dev
+   ```
+5. **Open in browser**
+
+   ```
+   http://localhost:5173
+   ```
+
+## 🔧 API Setup
+
+### Google OAuth 2.0
+
+1. Go to [Google Cloud Console](https://console.cloud.google.com/)
+2. Create a new project or select existing
+3. Navigate to **APIs & Services** → **Credentials**
+4. Create **OAuth 2.0 Client ID** (Web application)
+5. Add authorized origins and redirect URIs
+
+### Google Gemini API
+
+1. Visit [Google AI Studio](https://aistudio.google.com/)
+2. Create an API key
+3. Add to your `.env` file
+
+### Firebase Setup
+
+1. Go to [Firebase Console](https://console.firebase.google.com/)
+2. Create a new project
+3. Enable **Firestore Database**
+4. Add a web app and copy config values
 
 ## 📁 Project Structure
 
 ```
 src/
-├── components/          # Reusable UI components
-│   ├── dashboard/      # Dashboard-specific components
+├── components/           # Reusable UI components
+│   ├── dashboard/       # Dashboard widgets
 │   ├── Sidebar.tsx
 │   ├── TopNavbar.tsx
-│   └── ResumeUpload.tsx
-├── context/            # React Context providers
-├── hooks/              # Custom React hooks
-├── layouts/            # Layout components
-├── pages/              # Page components
-├── services/           # API and service layer
-│   ├── geminiService.ts  # Gemini API integration
-│   └── resumeParser.ts
-└── types/              # TypeScript type definitions
+│   └── MagicBento.tsx
+├── context/             # React Context providers
+│   ├── AuthContext.tsx  # Google OAuth state
+│   └── AppContext.tsx   # App-wide state
+├── hooks/               # Custom React hooks
+├── layouts/             # Layout components
+├── lib/                 # Utilities
+│   ├── firebase.ts      # Firebase initialization
+│   └── utils.ts
+├── pages/               # Route components
+│   ├── Dashboard.tsx
+│   ├── ResumeAnalysis.tsx
+│   ├── Jobs.tsx
+│   └── Settings.tsx
+├── services/            # API integrations
+│   ├── geminiService.ts # Gemini AI
+│   └── firestoreService.ts
+└── types/               # TypeScript definitions
 ```
 
-## 🔧 Development
+## 🤝 Contributing
 
-```bash
-# Start dev server
-npm run dev
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
-```
-
-## 🌟 Why Gemini?
-
-## 📝 Future Enhancements (Phase 2)
-
-- Firebase Authentication
-- Firestore data persistence
-- Firebase Storage for resume files
-- Multi-user support
-- Data synchronization across devices
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## 📄 License
 
-MIT License - feel free to use this project for personal or commercial purposes.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [Google Gemini](https://ai.google.dev/) for AI capabilities
+- [Firebase](https://firebase.google.com/) for backend services
+- [Vercel](https://vercel.com/) for hosting
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [Lucide](https://lucide.dev/) for beautiful icons
 
 ---
 
-Built with ❤️ using React, TypeScript, and Gemini AI
+<div align="center">
+
+**Built with ❤️ using Google AI & Firebase**
+
+⭐ Star this repo if you find it helpful!
+
+</div>
